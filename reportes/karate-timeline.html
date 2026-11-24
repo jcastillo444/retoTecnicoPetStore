@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"co\/com\/petstore\/usuario[1:21]","start":1795532449134,"end":1795532450392,"title":"co\/com\/petstore\/usuario[1:21] 10:00:49.134-10:00:50.392 Crear un usuario"},{"id":2,"group":1,"content":"co\/com\/petstore\/usuario[2:32]","start":1795532450733,"end":1795532451373,"title":"co\/com\/petstore\/usuario[2:32] 10:00:50.733-10:00:51.373 Buscar el usuario creado"},{"id":3,"group":1,"content":"co\/com\/petstore\/usuario[3:44]","start":1795532451677,"end":1795532452295,"title":"co\/com\/petstore\/usuario[3:44] 10:00:51.677-10:00:52.295 Actualizar el nombre y el correo del usuario"},{"id":4,"group":1,"content":"co\/com\/petstore\/usuario[4:56]","start":1795532452606,"end":1795532453511,"title":"co\/com\/petstore\/usuario[4:56] 10:00:52.606-10:00:53.511 Buscar el usuario actualizado"},{"id":5,"group":1,"content":"co\/com\/petstore\/usuario[5:70]","start":1795532453816,"end":1795532454711,"title":"co\/com\/petstore\/usuario[5:70] 10:00:53.816-10:00:54.711 Eliminar el usuario"},{"id":6,"group":1,"content":"co\/com\/petstore\/usuario[6:88]","start":1795532455009,"end":1795532456187,"title":"co\/com\/petstore\/usuario[6:88] 10:00:55.009-10:00:56.187 Hallazgo - el PUT ignora el username de la URL y actualiza el usuario del body"},{"id":7,"group":1,"content":"co\/com\/petstore\/usuario[7:115]","start":1795532456482,"end":1795532456770,"title":"co\/com\/petstore\/usuario[7:115] 10:00:56.482-10:00:56.770 Buscar un usuario que no existe retorna 404"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

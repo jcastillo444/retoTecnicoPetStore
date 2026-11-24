@@ -1,0 +1,10 @@
+{
+  "id": "#(userId)",
+  "username": "#(username)",
+  "firstName": "Jonathan",
+  "lastName": "Castillo",
+  "email": "#('jonathan.pruebas_' + timestamp + '@pruebas.com')",
+  "password": "Clave4321",
+  "phone": "3001234567",
+  "userStatus": 0
+}

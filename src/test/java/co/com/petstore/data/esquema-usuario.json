@@ -1,0 +1,10 @@
+{
+  "id": "#number",
+  "username": "#string",
+  "firstName": "#string",
+  "lastName": "#string",
+  "email": "#regex .+@.+\\..+",
+  "password": "#string",
+  "phone": "#string",
+  "userStatus": "#number"
+}
